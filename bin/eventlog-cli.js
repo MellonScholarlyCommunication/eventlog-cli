@@ -25,10 +25,9 @@ program.command('where')
   });
 
 program.command('get') 
-  .argument('<url>', 'Artifact url')
+  .argument('<url>', 'EventLog url')
   .action( async (url) => {
-    const loc = await discoverLog(url);
-    const log = await getLog(loc);
+    const log = await getLog(url);
     if (log) {
         console.log(JSON.stringify(log,null,2));
     }
