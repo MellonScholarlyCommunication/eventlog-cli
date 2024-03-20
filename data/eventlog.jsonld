@@ -5,10 +5,7 @@
         "ldes": "https://w3id.org/ldes#",
         "tree": "https://w3id.org/tree#",
         "EventLog": "ldes:EventStream",
-        "member": {
-            "@id": "tree:member",
-            "@type": "@id"
-        }
+        "member": { "@id": "tree:member", "@type": "@id" }
     },
     "id": "http://localhost:8000/eventlog.jsonld",
     "type": "EventLog",
