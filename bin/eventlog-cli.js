@@ -18,7 +18,15 @@ program.command('where')
   .option('-f, --for <url>','Artifact url')
   .argument('<url>', 'Artifact|Service url')
   .action( async (url,options) => {
-    const loc = await discoverLog(url,options['for']);
+    let loc;
+
+    if (options['for']) {
+      loc = await discoverLog(options['for'],url);
+    }
+    else {
+      loc = await discoverLog(url);
+    }
+    
     if (loc) {
         console.log(loc);
     }

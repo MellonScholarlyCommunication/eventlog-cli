@@ -17,7 +17,7 @@
     "demo-where-dn": "node bin/eventlog-cli.js where http://localhost:8000/artifact.html",
     "demo-get-dn": "node bin/eventlog-cli.js get http://localhost:8000/eventlog.ttl",
     "demo-event-dn": "node bin/eventlog-cli.js event http://localhost:8000/event1.jsonld",
-    "demo-where-sn": "node bin/eventlog-cli.js where --for http://localhost:8000/artifact.html http://localhost:8000/service/card.ttl",
+    "demo-where-sn": "node bin/eventlog-cli.js where --for http://localhost:8000/service/card.ttl http://localhost:8000/artifact.html",
     "demo-get-sn": "node bin/eventlog-cli.js get http://localhost:8000/service/eventlog.ttl",
     "demo-event-sn": "node bin/eventlog-cli.js event http://localhost:8000/service/event1.jsonld"
   },
