@@ -1,0 +1,11 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix solid: <http://www.w3.org/ns/solid/terms#>.
+
+<>
+    a foaf:PersonalProfileDocument;
+    foaf:maker <http://localhost:8000/service/card.ttl#me>;
+    foaf:primaryTopic <http://localhost:8000/service/card.ttl#me>.
+
+<http://localhost:8000/service/card.ttl#me>
+    foaf:name "Review Service" ;
+    a foaf:Person.

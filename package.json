@@ -2,7 +2,6 @@
   "name": "eventlog-cli",
   "version": "1.0.0",
   "description": "A EventLog client",
-  "type": "module",
   "main": "lib/eventlog.js",
   "repository": "https://github.com/MellonScholarlyCommunication/eventlog-cli",
   "keywords": [
@@ -16,9 +15,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "demo": "node bin/eventlog-cli.js https://labs.eventnotifications.net/artifacts/paper01/"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "dependencies": {
-    "node-fetch": "^3.3.2"
+    "@comunica/query-sparql": "^3.0.1",
+    "commander": "^12.0.0",
+    "node-fetch": "1.7.1",
+    "parse-link-header": "^2.0.0",
+    "rdf-canonize": "^4.0.1",
+    "rdf-parse": "^2.3.3",
+    "streamify-string": "^1.0.1"
   }
 }

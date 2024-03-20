@@ -1,0 +1,7 @@
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix tree: <https://w3id.org/tree#> .
+
+<>
+   a ldes:EventStream ;
+   tree:member
+   	<http://localhost:8000/event1.jsonld> .
