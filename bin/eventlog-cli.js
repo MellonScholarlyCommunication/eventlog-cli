@@ -3,7 +3,7 @@
 const { program } = require('commander');
 const { createHash } = require('crypto');
 const { discoverLog, 
-        getLog, 
+        listEvents, 
         getEventSubject, 
         getEvent,
         canonizeEvent 
@@ -35,7 +35,7 @@ program.command('where')
 program.command('list') 
   .argument('<url>', 'EventLog url')
   .action( async (url) => {
-    const log = await getLog(url);
+    const log = await listEvents(url);
     if (log) {
         console.log(JSON.stringify(log,null,2));
     }
@@ -44,7 +44,7 @@ program.command('list')
 program.command('list-all')
   .argument('<url>', 'EventLog url')
   .action( async (url) => {
-    const log = await getLog(url);
+    const log = await listEvents(url);
     const result = [];
     if (log) {
       for (let i = 0 ; i < log.length ; i++) {
@@ -66,10 +66,10 @@ program.command('get')
 program.parse();
 
 async function eventDetails(url) {
-  const subject = await getEventSubject(url);
-  const event = await getEvent(url,subject);
-  const canonical = await canonizeEvent(url);
+  const event = await getEvent(url);
+  const canonical = await canonizeEvent(event['_body']);
   event['sha256'] = sha256(canonical);
+  delete event['_body'];
   return event;
 }
 
