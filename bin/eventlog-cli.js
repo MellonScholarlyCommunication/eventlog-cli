@@ -32,7 +32,7 @@ program.command('where')
     }
   });
 
-program.command('get') 
+program.command('list') 
   .argument('<url>', 'EventLog url')
   .action( async (url) => {
     const log = await getLog(url);
@@ -41,7 +41,7 @@ program.command('get')
     }
   });
 
-program.command('event') 
+program.command('get') 
   .argument('<url>', 'Event url')
   .action( async (url) => {
     const subject = await getEventSubject(url);

@@ -12,14 +12,14 @@ yarn run server
 $ ./bin/eventlog-cli.js where http://localhost:8000/artifact.html
 http://localhost:8000/eventlog.ttl
 
-# get all event log entries for the Event Log http://localhost:8000/eventlog.ttl
-$ ./bin/eventlog-cli.js get http://localhost:8000/eventlog.ttl
+# list all event log entries for the Event Log http://localhost:8000/eventlog.ttl
+$ ./bin/eventlog-cli.js list http://localhost:8000/eventlog.ttl
 [
   "http://localhost:8000/event1.jsonld"
 ]
 
 # show the details of the event entry http://localhost:8000/event1.jsonld
-$ ./bin/eventlog-cli.js event http://localhost:8000/event1.jsonld
+$ ./bin/eventlog-cli.js get http://localhost:8000/event1.jsonld
 {
   "id": "urn:uuid:1-4",
   "type": "https://purl.org/coar/notify_vocabulary/EndorsementAction",
