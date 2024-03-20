@@ -21,6 +21,7 @@ $ ./bin/eventlog-cli.js get http://localhost:8000/eventlog.ttl
 # show the details of the event entry http://localhost:8000/event1.jsonld
 $ ./bin/eventlog-cli.js event http://localhost:8000/event1.jsonld
 {
+  "id": "urn:uuid:1-4",
   "type": "https://purl.org/coar/notify_vocabulary/EndorsementAction",
   "actor": "http://localhost:8000/service/card.ttl",
   "object": "http://localhost:8000/service/review.html",
