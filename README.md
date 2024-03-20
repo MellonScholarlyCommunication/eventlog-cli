@@ -29,9 +29,30 @@ $ ./bin/eventlog-cli.js get http://localhost:8000/event1.jsonld
   "sha256": "Cq3QsXoV5JNGIzsOlqoCxLtv3uGL9Ho4et3xPkNHdMU="
 }
 
-# show for actor http://localhost:8000/service/card.ttl the event log http://localhost:8000/artifact.html
+# discover for actor http://localhost:8000/service/card.ttl an event log for the artifact http://localhost:8000/artifact.html
 ./bin/eventlog-cli.js where --for http://localhost:8000/service/card.ttl http://localhost:8000/artifact.html
 http://localhost:8000/service/eventlog.ttl
+
+# list all events for http://localhost:8000/service/eventlog.ttl
+./bin/eventlog-cli.js list-all http://localhost:8000/service/eventlog.ttl
+[
+  {
+    "id": "urn:uuid:1-4",
+    "type": "https://purl.org/coar/notify_vocabulary/EndorsementAction",
+    "actor": "http://localhost:8000/service/card.ttl",
+    "object": "http://localhost:8000/service/review.html",
+    "context": "http://localhost:8000/artifact.html",
+    "sha256": "Cq3QsXoV5JNGIzsOlqoCxLtv3uGL9Ho4et3xPkNHdMU="
+  },
+  {
+    "id": "urn:uuid:1-5",
+    "type": "https://www.w3.org/ns/activitystreams#Reject",
+    "actor": "http://localhost:8000/service/card.ttl",
+    "object": "urn:uuid:1-4",
+    "context": "http://localhost:8000/artifact.html",
+    "sha256": "5ozL7MTdU2GIrWOBEmd3uriuk8jsssNq20pBVnKA1eU="
+  }
+]
 ```
 
 ## see also
