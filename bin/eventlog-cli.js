@@ -41,19 +41,38 @@ program.command('list')
     }
   });
 
+program.command('list-all')
+  .argument('<url>', 'EventLog url')
+  .action( async (url) => {
+    const log = await getLog(url);
+    const result = [];
+    if (log) {
+      for (let i = 0 ; i < log.length ; i++) {
+        const event = await eventDetails(log[i]);
+        result.push(event);   
+      }
+
+      console.log(JSON.stringify(result,null,2));
+    }
+  });
+
 program.command('get') 
   .argument('<url>', 'Event url')
   .action( async (url) => {
-    const subject = await getEventSubject(url);
-    const event = await getEvent(url,subject);
-    const canonical = await canonizeEvent(url);
-    event['sha256'] = sha256(canonical);
-
+    const event = await eventDetails(url);
     console.log(JSON.stringify(event,null,2));
   });
 
 program.parse();
 
+async function eventDetails(url) {
+  const subject = await getEventSubject(url);
+  const event = await getEvent(url,subject);
+  const canonical = await canonizeEvent(url);
+  event['sha256'] = sha256(canonical);
+  return event;
+}
+
 function sha256(data) {
-    return createHash('sha256').update(data).digest('base64');
+  return createHash('sha256').update(data).digest('base64');
 }
