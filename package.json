@@ -1,0 +1,24 @@
+{
+  "name": "eventlog-cli",
+  "version": "1.0.0",
+  "description": "A EventLog client",
+  "type": "module",
+  "main": "lib/eventlog.js",
+  "repository": "https://github.com/MellonScholarlyCommunication/eventlog-cli",
+  "keywords": [
+    "event notifications",
+    "coar notify"
+  ],
+  "author": "Patrick Hochstenbach <Patrick.Hochtenbach@UGent.be>",
+  "bin": "./bin/eventlog-cli.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "demo": "node bin/eventlog-cli.js https://labs.eventnotifications.net/artifacts/paper01/"
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
