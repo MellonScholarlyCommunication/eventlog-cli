@@ -1,0 +1,16 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "ldes": "https://w3id.org/ldes#",
+        "tree": "https://w3id.org/tree#",
+        "EventLog": "ldes:EvenStream",
+        "member": "tree:member"
+    },
+    "id": "http://localhost:8000/eventlog.jsonld",
+    "type": "EventLog",
+    "member": [
+        "http://localhost:8000/service/event1.jsonld",
+        "http://localhost:8000/service/event2.jsonld"
+    ]
+}

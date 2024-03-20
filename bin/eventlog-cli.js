@@ -4,7 +4,6 @@ const { program } = require('commander');
 const { createHash } = require('crypto');
 const { discoverLog, 
         listEvents, 
-        getEventSubject, 
         getEvent,
         canonizeEvent 
     } = require('../lib/eventlog.js');

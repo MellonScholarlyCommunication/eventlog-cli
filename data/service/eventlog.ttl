@@ -1,8 +1,0 @@
-@prefix ldes: <https://w3id.org/ldes#> .
-@prefix tree: <https://w3id.org/tree#> .
-
-<>
-   a ldes:EventStream ;
-   tree:member
-   	<http://localhost:8000/service/event1.jsonld> ,
-   	<http://localhost:8000/service/event2.jsonld> .
