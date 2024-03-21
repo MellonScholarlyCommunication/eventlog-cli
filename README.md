@@ -2,6 +2,12 @@
 
 An experimental command line client for the [Event Notifications](https://www.eventnotifications.net) extension: Event Logs.
 
+## install
+
+```
+yarn install
+```
+
 ## usage
 
 ```

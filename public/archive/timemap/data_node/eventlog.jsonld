@@ -1,0 +1,7 @@
+<http://localhost:8000/data_node/eventlog.jsonld>;rel="original",
+<http://localhost:8000/archive/timemap/data_node/eventlog.jsonld>
+      ; rel="self";type="application/link-format"
+      ; from="Wed, 20 Mar 2024 18:02:59 GMT"
+      ; until="Thu, 21 Mar 2024 20:30:51 GMT",
+<http://localhost:8000/archive/web/20240320180259/data_node/eventlog.jsonld>
+      ; rel="first memento"; datetime="Wed, 20 Mar 2024 18:02:59 GMT"
