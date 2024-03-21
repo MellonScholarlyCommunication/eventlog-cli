@@ -7,9 +7,10 @@
         "EventLog": "ldes:EventStream",
         "member": { "@id": "tree:member", "@type": "@id" }
     },
-    "id": "http://localhost:8000/eventlog.jsonld",
+    "id": "http://localhost:8000/service_node/eventlog.jsonld",
     "type": "EventLog",
     "member": [
-        "http://localhost:8000/event1.jsonld"
+        "http://localhost:8000/service_node/event1.jsonld",
+        "http://localhost:8000/service_node/event2.jsonld"
     ]
 }

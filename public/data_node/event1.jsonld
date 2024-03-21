@@ -9,18 +9,18 @@
       "coar-notify:EndorsementAction"
     ],
     "actor": {
-      "id": "http://localhost:8000/service/card.ttl",
+      "id": "http://localhost:8000/service_node/card.ttl",
       "name": "Springer Link",
-      "inbox": "http://localhost:8000/service/inbox",
+      "inbox": "http://localhost:8000/service_node/inbox",
       "type": "Service"
     },
     "origin": {
       "id": "https://link.springer.com/system",
       "type": "Service"
     },
-    "context": "http://localhost:8000/artifact.html",
+    "context": "http://localhost:8000/data_node/artifact.html",
     "object": {
-      "id": "http://localhost:8000/service/review.html",
+      "id": "http://localhost:8000/service_node/review.html",
       "type": [
         "Page",
         "sorg:WebPage"

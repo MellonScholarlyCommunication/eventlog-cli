@@ -27,7 +27,7 @@ const requestListener = function (req, res) {
     }
     catch(e) {
         res.writeHead(500)
-        res.end(e);
+        res.end(e.message);
     }
 }
 

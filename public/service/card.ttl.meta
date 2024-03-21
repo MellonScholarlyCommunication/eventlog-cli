@@ -1,4 +1,0 @@
-{
-    "Content-Type": "text/turtle",
-    "Link-Template": "\"http://localhost:8000/service/eventlog.ttl\" ; rel=\"eventlog\""
-}
