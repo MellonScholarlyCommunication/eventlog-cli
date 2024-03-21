@@ -5,33 +5,34 @@ const fs = require('fs');
 
 const host = 'localhost';
 const port = 8000;
+const public_dir = './public';
 
 const requestListener = function (req, res) {
     const pathItem = req.url.substring(1);
 
-    if (fs.lstatSync(`./data/${pathItem}`).isFile()) {
-        try {
-            const content = fs.readFileSync(`./data/${pathItem}`, { encoding: 'utf-8'});
-            const headers = JSON.parse(fs.readFileSync(`./data/${pathItem}.meta`, { encoding : 'utf-8'}));
+    try {
+        if (fs.lstatSync(`${public_dir}/${pathItem}`).isFile()) {
+            const content = fs.readFileSync(`${public_dir}/${pathItem}`, { encoding: 'utf-8'});
+            const headers = JSON.parse(fs.readFileSync(`${public_dir}/${pathItem}.meta`, { encoding : 'utf-8'}));
             Object.keys(headers).forEach( (key) => {
                 res.setHeader(key, headers[key]);
             });
             res.writeHead(200);
             res.end(content);
         }
-        catch(e) {
-            res.writeHead(500)
-            res.end(e);
+        else {
+            res.writeHead(404);
+            res.end(`No such path: ${pathItem}`);
         }
     }
-    else {
-        res.writeHead(404);
-        res.end(`No such path: ${pathItem}`);
+    catch(e) {
+        res.writeHead(500)
+        res.end(e);
     }
 }
 
 const server = http.createServer(requestListener);
 
 server.listen(port, host, () => {
-    console.log(`Server is running on http://${host}:${port}`);
+    console.log(`Server is running on http://${host}:${port} for ${public_dir}`);
 });
