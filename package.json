@@ -25,6 +25,7 @@
   "devDependencies": {},
   "dependencies": {
     "commander": "^12.0.0",
+    "memento-cli": "^1.0.1",
     "node-fetch": "1.7.1",
     "parse-link-header": "^2.0.0",
     "rdf-canonize": "^4.0.1",

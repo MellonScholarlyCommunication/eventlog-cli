@@ -1,3 +1,4 @@
 {
-    "Content-Type": "application/ld+json"
+    "Content-Type": "application/ld+json",
+    "Link" : "<http://localhost:8000/archive/timemap/service_node/event1.jsonld> ; rel=\"timemap\""
 }
