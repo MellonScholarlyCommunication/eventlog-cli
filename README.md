@@ -37,11 +37,11 @@ $ ./bin/eventlog-cli.js get http://localhost:8000/data_node/event1.jsonld
 
 # discover for actor http://localhost:8000/service_node/card.ttl 
 # an event log for the artifact http://localhost:8000/data_node/artifact.html
-./bin/eventlog-cli.js where --for http://localhost:8000/service_node/card.ttl http://localhost:8000/data_node/artifact.html
+$ ./bin/eventlog-cli.js where --for http://localhost:8000/service_node/card.ttl http://localhost:8000/data_node/artifact.html
 http://localhost:8000/service_node/eventlog.jsonld
 
 # list all events for http://localhost:8000/service_node/eventlog.jsonld
-./bin/eventlog-cli.js list-all http://localhost:8000/service_node/eventlog.jsonld
+$ ./bin/eventlog-cli.js list-all http://localhost:8000/service_node/eventlog.jsonld
 [
   {
     "id": "urn:uuid:1-4",
@@ -58,6 +58,19 @@ http://localhost:8000/service_node/eventlog.jsonld
     "object": "urn:uuid:1-4",
     "context": "http://localhost:8000/data_node/artifact.html",
     "sha256": "5ozL7MTdU2GIrWOBEmd3uriuk8jsssNq20pBVnKA1eU="
+  }
+]
+
+# list all mementos for http://localhost:8000/service_node/eventlog.jsonld
+$ ./bin/eventlog-cli.js list-mementos http://localhost:8000/service_node/eventlog.jsonld
+[
+  {
+    "memento": "http://localhost:8000/archive/web/20240320180259/service_node/eventlog.jsonld",
+    "datetime": "2024-03-20T18:02:59.000Z"
+  },
+  {
+    "memento": "http://localhost:8000/archive/web/20240321203051/service_node/eventlog.jsonld",
+    "datetime": "2024-03-21T20:30:51.000Z"
   }
 ]
 ```
