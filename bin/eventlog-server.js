@@ -13,12 +13,35 @@ const requestListener = function (req, res) {
     try {
         if (fs.lstatSync(`${public_dir}/${pathItem}`).isFile()) {
             const content = fs.readFileSync(`${public_dir}/${pathItem}`, { encoding: 'utf-8'});
-            const headers = JSON.parse(fs.readFileSync(`${public_dir}/${pathItem}.meta`, { encoding : 'utf-8'}));
-            Object.keys(headers).forEach( (key) => {
-                res.setHeader(key, headers[key]);
-            });
+            if (fs.existsSync(`${public_dir}/${pathItem}.meta`)) {
+                const headers = JSON.parse(fs.readFileSync(`${public_dir}/${pathItem}.meta`, { encoding : 'utf-8'}));
+                Object.keys(headers).forEach( (key) => {
+                    res.setHeader(key, headers[key]);
+                });
+            }
             res.writeHead(200);
             res.end(content);
+        }
+        else if (fs.lstatSync(`${public_dir}/${pathItem}`).isDirectory()) {
+            const lsDir = fs.readdirSync(`${public_dir}/${pathItem}`);
+
+            if (fs.existsSync(`${public_dir}/${pathItem}.meta`)) {
+                const headers = JSON.parse(fs.readFileSync(`${public_dir}/${pathItem}.meta`, { encoding : 'utf-8'}));
+                Object.keys(headers).forEach( (key) => {
+                    res.setHeader(key, headers[key]);
+                });
+            }
+            else {
+                res.setHeader('Content-Type','text/html');
+            }
+
+            let content = '<html><body>';
+            lsDir.forEach( (entry) => {
+                content += `<a href="http://${host}:${port}/${pathItem}/${entry}">${entry}</a><br>`
+            });
+            content += '</body></html>';
+            res.writeHead(200);
+            res.end(content); 
         }
         else {
             res.writeHead(404);
