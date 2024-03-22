@@ -20,7 +20,8 @@
     "demo-where-sn": "node bin/eventlog-cli.js where --for http://localhost:8000/service_node/card.ttl http://localhost:8000/artifact.html",
     "demo-get-sn": "node bin/eventlog-cli.js list http://localhost:8000/service_node/eventlog.jsonld",
     "demo-get-all-sn": "node bin/eventlog-cli.js list-all http://localhost:8000/service_node/eventlog.jsonld",
-    "demo-event-sn": "node bin/eventlog-cli.js get http://localhost:8000/service_node/event1.jsonld"
+    "demo-event-sn": "node bin/eventlog-cli.js get http://localhost:8000/service_node/event1.jsonld",
+    "demo-list-mementos-dn": "node ./bin/eventlog-cli.js list-mementos http://localhost:8000/data_node/eventlog.jsonld"
   },
   "devDependencies": {},
   "dependencies": {
