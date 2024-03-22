@@ -5,7 +5,8 @@ const { createHash } = require('crypto');
 const { discoverLog, 
         listEvents, 
         getEvent,
-        canonizeEvent 
+        canonizeEvent,
+        listEventMementos
     } = require('../lib/eventlog.js');
 
 program
@@ -60,6 +61,12 @@ program.command('get')
   .action( async (url) => {
     const event = await eventDetails(url);
     console.log(JSON.stringify(event,null,2));
+  });
+
+program.command('list-mementos')
+  .argument('<url>', 'Event url')
+  .action( async (url) => {
+    const mementos = await listEventMementos(url);
   });
 
 program.parse();
