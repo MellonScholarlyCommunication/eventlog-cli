@@ -1,7 +1,6 @@
 {
     "Content-Type": "application/ld+json",
     "Link" : [
-        "<http://localhost:8000/archive/timemap/data_node/eventlog.jsonld> ; rel=\"timemap\"" ,
-        "<http://localhost:8000/archive2/timemap/data_node/eventlog.jsonld> ; rel=\"timemap\""
+        "<http://localhost:8000/archive/timemap/data_node/eventlog.jsonld> ; rel=\"timemap\"" 
     ]
 }

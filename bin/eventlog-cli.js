@@ -67,6 +67,7 @@ program.command('list-mementos')
   .argument('<url>', 'Event url')
   .action( async (url) => {
     const mementos = await listEventMementos(url);
+    console.log(JSON.stringify(mementos,null,2));
   });
 
 program.parse();
