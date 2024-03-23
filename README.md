@@ -76,7 +76,7 @@ $ ./bin/eventlog-cli.js list-mementos http://localhost:8000/service_node/eventlo
 
 # crawl the web for an event log entry http://localhost:8000/data_node/event1.jsonld
 # for artifact http://localhost:8000/data_node/artifact.html
-$ ./bin/eventlog-cli.js http://localhost:8000/data_node/artifact.html http://localhost:8000/data_node/event1.jsonld > demo/crawl.trig
+$ ./bin/eventlog-cli.js crawl http://localhost:8000/data_node/artifact.html http://localhost:8000/data_node/event1.jsonld > demo/crawl.trig
 ```
 
 ## see also
