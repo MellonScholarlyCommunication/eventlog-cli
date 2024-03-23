@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 
 const { program } = require('commander');
-const { createHash } = require('crypto');
 const { discoverLog, 
         listEvents, 
         getEvent,
         canonizeEvent,
-        listEventMementos
+        listEventMementos,
+        crawlEvent,
+        sha256
     } = require('../lib/eventlog.js');
 
 program
@@ -15,7 +16,7 @@ program
   .description('CLI to Event Logs');
 
 program.command('where')
-  .option('-f, --for <url>','Artifact url')
+  .option('-f, --for <actor>','Actor')
   .argument('<url>', 'Artifact|Service url')
   .action( async (url,options) => {
     let loc;
@@ -70,6 +71,13 @@ program.command('list-mementos')
     console.log(JSON.stringify(mementos,null,2));
   });
 
+program.command('crawl')
+  .argument('<artifact>', 'Artifact')
+  .argument('<eventEntry>', 'Event')
+  .action( async (artifact,eventEntry) => {
+    await crawlEvent(artifact,eventEntry);
+  });
+
 program.parse();
 
 async function eventDetails(url) {
@@ -78,8 +86,4 @@ async function eventDetails(url) {
   event['sha256'] = sha256(canonical);
   delete event['_body'];
   return event;
-}
-
-function sha256(data) {
-  return createHash('sha256').update(data).digest('base64');
 }

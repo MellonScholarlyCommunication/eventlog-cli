@@ -21,13 +21,15 @@
     "demo-get-sn": "node bin/eventlog-cli.js list http://localhost:8000/service_node/eventlog.jsonld",
     "demo-get-all-sn": "node bin/eventlog-cli.js list-all http://localhost:8000/service_node/eventlog.jsonld",
     "demo-event-sn": "node bin/eventlog-cli.js get http://localhost:8000/service_node/event1.jsonld",
-    "demo-list-mementos-dn": "node ./bin/eventlog-cli.js list-mementos http://localhost:8000/data_node/eventlog.jsonld"
+    "demo-list-mementos-dn": "node ./bin/eventlog-cli.js list-mementos http://localhost:8000/data_node/eventlog.jsonld",
+    "demo-crawl": "node ./bin/eventlog-cli.js crawl http://localhost:8000/data_node/artifact.html http://localhost:8000/data_node/event1.jsonld"
   },
   "devDependencies": {},
   "dependencies": {
     "commander": "^12.0.0",
     "http-link-header": "^1.1.3",
     "memento-cli": "^1.0.2",
+    "n3": "^1.17.2",
     "node-fetch": "1.7.1",
     "rdf-canonize": "^4.0.1",
     "rdf-parse": "^2.3.3",
