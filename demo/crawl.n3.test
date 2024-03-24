@@ -2,4 +2,4 @@
 
 <http://localhost:8000/data_node/eventlog.jsonld> test:hasEvent <http://localhost:8000/data_node/event1.jsonld>.
 <http://localhost:8000/data_node/event1.jsonld> test:authentic true.
-<http://localhost:8000/data_node/eventlog.jsonld> test:local_missing <http://localhost:8000/service_node/event2.jsonld>.
+<http://localhost:8000/data_node/eventlog.jsonld> test:missing <http://localhost:8000/service_node/event2.jsonld>.

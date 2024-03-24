@@ -30,5 +30,5 @@
 }
 =>
 {
-    ?DNEventLog test:local_missing ?SNEvent .
+    ?DNEventLog test:missing ?SNEvent .
 } .

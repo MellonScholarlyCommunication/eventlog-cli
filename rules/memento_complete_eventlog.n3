@@ -44,5 +44,5 @@
 }
 =>
 {
-    ?DNEventLog test:local_missing ?Member .
+    ?DNEventLog test:missing ?Member .
 } .
