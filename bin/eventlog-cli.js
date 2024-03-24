@@ -7,6 +7,7 @@ const { discoverLog,
         canonizeEvent,
         listEventMementos,
         crawlEvent,
+        printN3Store,
         sha256
     } = require('../lib/eventlog.js');
 
@@ -75,7 +76,9 @@ program.command('crawl')
   .argument('<artifact>', 'Artifact')
   .argument('<eventEntry>', 'Event')
   .action( async (artifact,eventEntry) => {
-    await crawlEvent(artifact,eventEntry);
+    const store = await crawlEvent(artifact,eventEntry);
+    const trig = await printN3Store(store, 'TriG');
+    console.log(trig.replaceAll(/{/g,'= {'));
   });
 
 program.parse();

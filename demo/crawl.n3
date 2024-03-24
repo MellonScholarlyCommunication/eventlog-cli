@@ -1,0 +1,57 @@
+@prefix as: <https://www.w3.org/ns/activitystreams#>.
+@prefix ev: <https://www.eventnotifications.net/ns#>.
+@prefix notify: <https://purl.org/coar/notify_vocabulary/>.
+@prefix tree: <https://w3id.org/tree#>.
+@prefix ldes: <https://w3id.org/ldes#>.
+@prefix iana: <http://www.iana.org/assignments/relation/>.
+@prefix dataid: <http://dataid.dbpedia.org/ns/core#>.
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix schema: <http://schema.org/>.
+
+<http://localhost:8000/data_node/artifact.html> a ev:Artifact;
+    iana:eventlog <http://localhost:8000/data_node/eventlog.jsonld>;
+    ev:hasEvent <http://localhost:8000/data_node/event1.jsonld>, <http://localhost:8000/service_node/event1.jsonld>, <http://localhost:8000/service_node/event2.jsonld>.
+<http://localhost:8000/data_node/eventlog.jsonld> iana:memento <http://localhost:8000/archive/web/20240320180259/data_node/eventlog.jsonld>.
+<http://localhost:8000/data_node/event1.jsonld> a ev:Event, ev:DataNodeEvent;
+    dataid:checksum "Qc3cAKHw/i2RgH3sqJIMhLjpvzBgAnYoIgrEphhOyS8=";
+    ev:actor <http://localhost:8000/service_node/card.ttl>.
+<http://localhost:8000/service_node/card.ttl> a ev:ServiceNode;
+    iana:eventlog <http://localhost:8000/service_node/eventlog.jsonld>.
+<http://localhost:8000/service_node/event1.jsonld> a ev:Event, ev:ServiceNodeEvent;
+    dataid:checksum "Qc3cAKHw/i2RgH3sqJIMhLjpvzBgAnYoIgrEphhOyS8=";
+    ev:actor <http://localhost:8000/service_node/card.ttl>.
+<http://localhost:8000/service_node/event2.jsonld> a ev:Event, ev:ServiceNodeEvent;
+    dataid:checksum "w/a4Ehs+3cOHR/p9MwN0v7ZdQI3582bNfD6gpljKroY=";
+    ev:actor <http://localhost:8000/service_node/card.ttl>.
+<http://localhost:8000/archive/web/20240320180259/data_node/eventlog.jsonld> dc:created "2024-03-20T18:02:59.000Z".
+<http://localhost:8000/data_node/event1.jsonld> = {
+<http://localhost:8000/service_node/card.ttl> a as:Service;
+    as:name "Springer Link";
+    <http://www.w3.org/ns/ldp#inbox> <http://localhost:8000/service_node/inbox>.
+<urn:uuid:1-4> a as:Announce, notify:EndorsementAction;
+    as:actor <http://localhost:8000/service_node/card.ttl>;
+    as:origin <https://link.springer.com/system>;
+    as:context <http://localhost:8000/data_node/artifact.html>;
+    as:object <http://localhost:8000/service_node/review.html>.
+<https://link.springer.com/system> a as:Service.
+<http://localhost:8000/service_node/review.html> a as:Page, schema:WebPage;
+    iana:cite-as <https://doi.org/10.1007/978-3-031-16802-4_11>
+}
+<http://localhost:8000/service_node/event1.jsonld> = {
+<http://localhost:8000/service_node/card.ttl> a as:Service;
+    as:name "Springer Link";
+    <http://www.w3.org/ns/ldp#inbox> <http://localhost:8000/service_node/inbox>.
+<urn:uuid:1-4> a as:Announce, notify:EndorsementAction;
+    as:actor <http://localhost:8000/service_node/card.ttl>;
+    as:origin <https://link.springer.com/system>;
+    as:context <http://localhost:8000/data_node/artifact.html>;
+    as:object <http://localhost:8000/service_node/review.html>.
+<https://link.springer.com/system> a as:Service.
+<http://localhost:8000/service_node/review.html> a as:Page, schema:WebPage;
+    iana:cite-as <https://doi.org/10.1007/978-3-031-16802-4_11>
+}
+<http://localhost:8000/data_node/eventlog.jsonld> = {
+<http://localhost:8000/data_node/eventlog.jsonld> a ldes:EventStream;
+    tree:member <http://localhost:8000/data_node/event1.jsonld>
+}
+
