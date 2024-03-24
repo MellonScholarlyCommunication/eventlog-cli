@@ -23,7 +23,7 @@
       "id": "http://localhost:8000/service_node/review.html",
       "type": [
         "Page",
-        "sorg:WebPage"
+        "schema:ScholarlyArticle"
       ],
       "ietf:cite-as": "https://doi.org/10.1007/978-3-031-16802-4_11"
     }
