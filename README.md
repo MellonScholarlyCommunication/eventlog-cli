@@ -8,6 +8,8 @@ An experimental command line client for the [Event Notifications](https://www.ev
 yarn install
 ```
 
+We also need a installation of the [EYE](https://github.com/eyereasoner/eye) reasoner.
+
 ## usage
 
 ```
@@ -77,6 +79,12 @@ $ ./bin/eventlog-cli.js list-mementos http://localhost:8000/service_node/eventlo
 # crawl the web for an event log entry http://localhost:8000/data_node/event1.jsonld
 # for artifact http://localhost:8000/data_node/artifact.html
 $ ./bin/eventlog-cli.js crawl http://localhost:8000/data_node/artifact.html http://localhost:8000/data_node/event1.jsonld > demo/crawl.n3
+
+# Test the crawled data for authenticity and completeness
+$ ./bin/test-crawl.sh demo/crawl.n3
+@prefix test: <https://example.org/ns#>.
+
+<http://localhost:8000/data_node/event1.jsonld> test:authentic true.
 ```
 
 ## see also
