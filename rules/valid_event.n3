@@ -1,0 +1,33 @@
+@prefix as: <https://www.w3.org/ns/activitystreams#>.
+@prefix ev: <https://www.eventnotifications.net/ns#>.
+@prefix notify: <https://purl.org/coar/notify_vocabulary/>.
+@prefix tree: <https://w3id.org/tree#>.
+@prefix ldes: <https://w3id.org/ldes#>.
+@prefix iana: <http://www.iana.org/assignments/relation/>.
+@prefix dataid: <http://dataid.dbpedia.org/ns/core#>.
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix schema: <http://schema.org/>.
+@prefix test: <https://example.org/ns#> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+
+# Check if the artifact has an event entry that has the 
+# same checksum as a service node entry
+{
+    ?Artifact 
+        a ev:Artifact ;
+        ev:hasEvent ?DNEvent .
+    
+    ?DNEvent 
+        a ev:DataNodeEvent ;
+        dataid:checksum ?Checksum1 .
+    
+    ?SNEvent
+        a ev:ServiceNodeEvent ;
+        dataid:checksum ?Checksum2 .
+    
+    ?Checksum1 log:equalTo ?Checksum2 .
+}
+=>
+{
+    ?DNEvent test:authentic true .
+} .

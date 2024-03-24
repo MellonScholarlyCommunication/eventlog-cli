@@ -1,0 +1,3 @@
+@prefix test: <https://example.org/ns#>.
+
+<http://localhost:8000/data_node/event1.jsonld> test:authentic true.

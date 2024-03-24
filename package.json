@@ -22,7 +22,8 @@
     "demo-get-all-sn": "node bin/eventlog-cli.js list-all http://localhost:8000/service_node/eventlog.jsonld",
     "demo-event-sn": "node bin/eventlog-cli.js get http://localhost:8000/service_node/event1.jsonld",
     "demo-list-mementos-dn": "node ./bin/eventlog-cli.js list-mementos http://localhost:8000/data_node/eventlog.jsonld",
-    "demo-crawl": "node ./bin/eventlog-cli.js crawl http://localhost:8000/data_node/artifact.html http://localhost:8000/data_node/event1.jsonld"
+    "demo-crawl": "node ./bin/eventlog-cli.js crawl http://localhost:8000/data_node/artifact.html http://localhost:8000/data_node/event1.jsonld",
+    "test-crawl": "./bin/test-crawl.sh demo/crawl.n3"
   },
   "devDependencies": {},
   "dependencies": {
