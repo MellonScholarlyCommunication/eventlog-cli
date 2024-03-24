@@ -87,6 +87,10 @@ $ ./bin/test-crawl.sh demo/crawl.n3
 <http://localhost:8000/data_node/event1.jsonld> test:authentic true.
 ```
 
+## environmental variables
+
+- `LOG4JS` : set to `info`, `debug`, `error` to receive logging information
+
 ## see also
 
 https://labs.eventnotifications.net
