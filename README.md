@@ -76,9 +76,10 @@ $ ./bin/eventlog-cli.js list-mementos http://localhost:8000/service_node/eventlo
   }
 ]
 
-# crawl the web for an event log entry http://localhost:8000/data_node/event1.jsonld
-# for artifact http://localhost:8000/data_node/artifact.html
-$ ./bin/eventlog-cli.js crawl http://localhost:8000/data_node/artifact.html http://localhost:8000/data_node/event1.jsonld > demo/crawl.n3
+# crawl the web for artifact http://localhost:8000/data_node/artifact.html
+# and receive information about its event log, related service node event logs
+# and mementos of the event log
+$ ./bin/eventlog-cli.js crawl http://localhost:8000/data_node/artifact.html > demo/crawl.n3
 
 # Test the crawled data for authenticity and completeness
 $ ./bin/test-crawl.sh demo/crawl.n3

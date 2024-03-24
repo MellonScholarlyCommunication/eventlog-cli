@@ -74,9 +74,8 @@ program.command('list-mementos')
 
 program.command('crawl')
   .argument('<artifact>', 'Artifact')
-  .argument('<eventEntry>', 'Event')
-  .action( async (artifact,eventEntry) => {
-    const store = await crawlEvent(artifact,eventEntry);
+  .action( async (artifact) => {
+    const store = await crawlEvent(artifact);
     const trig = await printN3Store(store, 'TriG');
     console.log(trig.replaceAll(/{/g,'= {').replaceAll(/}/g,'}.'));
   });
