@@ -10,22 +10,25 @@
 @prefix test: <https://example.org/ns#> .
 @prefix log: <http://www.w3.org/2000/10/swap/log#> .
 
-# Check if the artifact has an event entry that has the 
-# same checksum as a service node entry
+# Check a local event log for service nodes. Test if all events
+# a service node provided for an artifact are available in the 
+# local event log.
 {
     ?Artifact 
         a ev:Artifact ;
-        ev:hasEvent ?DNEvent .
-    
-    ?DNEvent 
-        a ev:DataNodeEvent ;
-        dataid:checksum ?Checksum .
-    
+        ev:eventlog ?DNEventLog .
+
     ?SNEvent
         a ev:ServiceNodeEvent ;
         dataid:checksum ?Checksum .
+
+    ?SCOPE log:notIncludes {
+        ?DNEvent 
+            a ev:DataNodeEvent ;
+            dataid:checksum ?Checksum .
+     } .
 }
 =>
 {
-    ?DNEvent test:authentic true .
+    ?DNEventLog test:local_missing ?SNEvent .
 } .

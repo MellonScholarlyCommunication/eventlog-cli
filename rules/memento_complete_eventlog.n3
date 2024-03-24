@@ -1,0 +1,48 @@
+@prefix as: <https://www.w3.org/ns/activitystreams#>.
+@prefix ev: <https://www.eventnotifications.net/ns#>.
+@prefix notify: <https://purl.org/coar/notify_vocabulary/>.
+@prefix tree: <https://w3id.org/tree#>.
+@prefix ldes: <https://w3id.org/ldes#>.
+@prefix iana: <http://www.iana.org/assignments/relation/>.
+@prefix dataid: <http://dataid.dbpedia.org/ns/core#>.
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix schema: <http://schema.org/>.
+@prefix test: <https://example.org/ns#> .
+@prefix log: <http://www.w3.org/2000/10/swap/log#> .
+
+# Test if a Event Log has a memento version
+{
+    ?Artifact 
+        a ev:Artifact ;
+        ev:eventlog ?DNEventLog .
+
+    ?SCOPE log:notIncludes {
+        ?DNEventLog iana:memento ?Memento .
+    } .
+}
+=>
+{
+    ?DNEventLog test:missing test:MementoArchive .
+} .
+
+# Test if all the entries in the memento version of the Event Log are also available 
+# in the local version of the Event Log
+{
+    ?Artifact 
+        a ev:Artifact ;
+        ev:eventlog ?DNEventLog .
+
+    ?DNEventLog iana:memento ?Memento .
+
+    ?Memento = ?RemoteGraph .
+
+    ?RemoteGraph log:includes { ?DNEventLog tree:member ?Member } .
+
+    ?DNEventLog = ?LocalGraph .
+
+    ?LocalGraph log:notIncludes { ?DNEventLog tree:member ?Member } .
+}
+=>
+{
+    ?DNEventLog test:local_missing ?Member .
+} .

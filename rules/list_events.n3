@@ -10,22 +10,18 @@
 @prefix test: <https://example.org/ns#> .
 @prefix log: <http://www.w3.org/2000/10/swap/log#> .
 
-# Check if the artifact has an event entry that has the 
-# same checksum as a service node entry
+# List all event log entries for an artifact
 {
     ?Artifact 
         a ev:Artifact ;
+        ev:eventlog ?DNEventLog .
+
+    ?Artifact
         ev:hasEvent ?DNEvent .
     
-    ?DNEvent 
-        a ev:DataNodeEvent ;
-        dataid:checksum ?Checksum .
-    
-    ?SNEvent
-        a ev:ServiceNodeEvent ;
-        dataid:checksum ?Checksum .
+    ?DNEvent a ev:DataNodeEvent .
 }
 =>
 {
-    ?DNEvent test:authentic true .
+    ?DNEventLog test:hasEvent ?DNEvent .
 } .
