@@ -8,7 +8,7 @@ An experimental command line client for the [Event Notifications](https://www.ev
 yarn install
 ```
 
-We also need a installation of the [EYE](https://github.com/eyereasoner/eye) reasoner.
+We also need an installation of the [EYE](https://github.com/eyereasoner/eye) reasoner.
 
 ## usage
 
