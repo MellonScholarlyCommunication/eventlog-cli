@@ -36,7 +36,7 @@
 <https://link.springer.com/system> a as:Service.
 <http://localhost:8000/service_node/review.html> a as:Page, schema:WebPage;
     iana:cite-as <https://doi.org/10.1007/978-3-031-16802-4_11>
-}
+}.
 <http://localhost:8000/service_node/event1.jsonld> = {
 <http://localhost:8000/service_node/card.ttl> a as:Service;
     as:name "Springer Link";
@@ -49,9 +49,9 @@
 <https://link.springer.com/system> a as:Service.
 <http://localhost:8000/service_node/review.html> a as:Page, schema:WebPage;
     iana:cite-as <https://doi.org/10.1007/978-3-031-16802-4_11>
-}
+}.
 <http://localhost:8000/data_node/eventlog.jsonld> = {
 <http://localhost:8000/data_node/eventlog.jsonld> a ldes:EventStream;
     tree:member <http://localhost:8000/data_node/event1.jsonld>
-}
+}.
 

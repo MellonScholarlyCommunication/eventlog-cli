@@ -78,7 +78,7 @@ program.command('crawl')
   .action( async (artifact,eventEntry) => {
     const store = await crawlEvent(artifact,eventEntry);
     const trig = await printN3Store(store, 'TriG');
-    console.log(trig.replaceAll(/{/g,'= {'));
+    console.log(trig.replaceAll(/{/g,'= {').replaceAll(/}/g,'}.'));
   });
 
 program.parse();
