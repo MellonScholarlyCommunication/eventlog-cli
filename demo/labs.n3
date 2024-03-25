@@ -10,18 +10,28 @@
 
 <https://labs.eventnotifications.net/artifacts/paper01/> a ev:Artifact;
     ev:eventlog <https://labs.eventnotifications.net/artifacts/paper01/eventlog.jsonld>;
-    ev:hasEvent <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1-0.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1-1.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-2.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3-0.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3-1.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4-0.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4-1.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-2-5.jsonld>, <https://labs.eventnotifications.net/artifacts/paper02/eventlog/urn-uuid-2-5.jsonld>.
+    ev:hasEvent <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1-0.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1-1.jsonld>, <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/eventlog/paper01/1.jsonld>, <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/eventlog/paper01/2.jsonld>, <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/eventlog/paper01/3.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-2.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3-0.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3-1.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4-0.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4-1.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-2-5.jsonld>, <https://labs.eventnotifications.net/artifacts/paper02/eventlog/urn-uuid-2-5.jsonld>.
 <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1-0.jsonld> a ev:Event, ev:DataNodeEvent;
-    dataid:checksum "Ta4r2oRw8LTEdC0h/FN0QHR/Dz6P4GGvzLwKkrhPros=";
+    dataid:checksum "HyL0/EdlFNRjMoji0PwpQsDbAoyjzbshJpTRNKNpL20=";
     ev:actor <https://labs.eventnotifications.net/profile/card#me>.
 <https://labs.eventnotifications.net/profile/card#me> a ev:ServiceNode.
-<https://arxiv.org> a ev:ServiceNode.
+<https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/profile/card.ttl> a ev:ServiceNode;
+    ev:eventlog <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/eventlog/paper01.jsonld>.
 <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1-1.jsonld> a ev:Event, ev:DataNodeEvent;
-    dataid:checksum "xW6DM3heEdNM59DqB/z3aB1wLVSk96QNbO9OLY2rn/E=";
-    ev:actor <https://arxiv.org>.
+    dataid:checksum "RBwQETBQR6pIp0XJqnxOZVzFBcoTf423lMr65icyM4g=";
+    ev:actor <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/profile/card.ttl>.
+<https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/eventlog/paper01/1.jsonld> a ev:Event, ev:ServiceNodeEvent;
+    dataid:checksum "HyL0/EdlFNRjMoji0PwpQsDbAoyjzbshJpTRNKNpL20=";
+    ev:actor <https://labs.eventnotifications.net/profile/card#me>.
+<https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/eventlog/paper01/2.jsonld> a ev:Event, ev:ServiceNodeEvent;
+    dataid:checksum "RBwQETBQR6pIp0XJqnxOZVzFBcoTf423lMr65icyM4g=";
+    ev:actor <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/profile/card.ttl>.
+<https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/eventlog/paper01/3.jsonld> a ev:Event, ev:ServiceNodeEvent;
+    dataid:checksum "bG1MRqf9vWYojzhn5LGfHxXiiIYFfw3VszC3olfslX8=";
+    ev:actor <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/profile/card.ttl>.
 <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1.jsonld> a ev:Event, ev:DataNodeEvent;
-    dataid:checksum "VY8aLlCaddD6bvJOctIDP4pBoakQFyGiRQX/1LCXWU8=";
-    ev:actor <https://arxiv.org>.
+    dataid:checksum "bG1MRqf9vWYojzhn5LGfHxXiiIYFfw3VszC3olfslX8=";
+    ev:actor <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/profile/card.ttl>.
 <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-2.jsonld> a ev:Event, ev:DataNodeEvent;
     dataid:checksum "RheNDEpt7Sv4h1pBOsu9qgxAjhj5o59OH+eBFkVrjQw=";
     ev:actor <https://zenodo.org>.
@@ -65,13 +75,13 @@
     as:actor <https://labs.eventnotifications.net/profile/card#me>;
     as:origin <https://labs.eventnotifications.net/system>;
     as:object <https://labs.eventnotifications.net/artifacts/paper01/>;
-    as:target <https://arxiv.org>.
+    as:target <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/profile/card.ttl>.
 <https://labs.eventnotifications.net/system> a as:Service.
 <https://labs.eventnotifications.net/artifacts/paper01/paper.pdf> a as:Article, schema:ScholarlyArticle;
     as:mediaType "application/pdf".
-<https://arxiv.org> a as:Service;
+<https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/profile/card.ttl> a as:Service;
     as:name "arXiv e-Print archive";
-    <http://www.w3.org/ns/ldp#inbox> <https://arxiv.org/inbox/>
+    <http://www.w3.org/ns/ldp#inbox> <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/inbox/>
 }.
 <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1-1.jsonld> = {
 <https://labs.eventnotifications.net/artifacts/paper01/> a schema:AboutPage;
@@ -84,21 +94,90 @@
     as:actor <https://labs.eventnotifications.net/profile/card#me>;
     as:origin <https://labs.eventnotifications.net/system>;
     as:object <https://labs.eventnotifications.net/artifacts/paper01/>;
-    as:target <https://arxiv.org>.
+    as:target <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/profile/card.ttl>.
 <https://labs.eventnotifications.net/system> a as:Service.
 <https://labs.eventnotifications.net/artifacts/paper01/paper.pdf> a as:Article, schema:ScholarlyArticle;
     as:mediaType "application/pdf".
-<https://arxiv.org> a as:Service;
+<https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/profile/card.ttl> a as:Service;
     as:name "arXiv e-Print archive";
-    <http://www.w3.org/ns/ldp#inbox> <https://arxiv.org/inbox/>.
+    <http://www.w3.org/ns/ldp#inbox> <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/inbox/>.
 <urn:uuid:1-1-1> a notify:IngestAction, as:Accept;
-    as:actor <https://arxiv.org>;
+    as:actor <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/profile/card.ttl>;
     as:origin <https://arxiv.org/system>;
     as:object <urn:uuid:1-1-0>;
     as:target <https://labs.eventnotifications.net/profile/card#me>;
     as:context <https://labs.eventnotifications.net/artifacts/paper01/>;
     as:inReplyTo <urn:uuid:1-1-0>.
 <https://arxiv.org/system> a as:Service
+}.
+<https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/eventlog/paper01/1.jsonld> = {
+<https://labs.eventnotifications.net/artifacts/paper01/> a schema:AboutPage;
+    iana:cite-as <https://w3id.org/eventnotifications/labs/artifacts/paper01/>;
+    as:url <https://labs.eventnotifications.net/artifacts/paper01/paper.pdf>.
+<https://labs.eventnotifications.net/profile/card#me> a as:Service;
+    as:name "Event Notifications Laboratory";
+    <http://www.w3.org/ns/ldp#inbox> <https://labs.eventnotifications.net/artifacts/paper01/inbox/>.
+<urn:uuid:1-1-0> a as:Offer, notify:IngestAction;
+    as:actor <https://labs.eventnotifications.net/profile/card#me>;
+    as:origin <https://labs.eventnotifications.net/system>;
+    as:object <https://labs.eventnotifications.net/artifacts/paper01/>;
+    as:target <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/profile/card.ttl>.
+<https://labs.eventnotifications.net/system> a as:Service.
+<https://labs.eventnotifications.net/artifacts/paper01/paper.pdf> a as:Article, schema:ScholarlyArticle;
+    as:mediaType "application/pdf".
+<https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/profile/card.ttl> a as:Service;
+    as:name "arXiv e-Print archive";
+    <http://www.w3.org/ns/ldp#inbox> <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/inbox/>
+}.
+<https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/eventlog/paper01/2.jsonld> = {
+<https://labs.eventnotifications.net/artifacts/paper01/> a schema:AboutPage;
+    iana:cite-as <https://w3id.org/eventnotifications/labs/artifacts/paper01/>;
+    as:url <https://labs.eventnotifications.net/artifacts/paper01/paper.pdf>.
+<https://labs.eventnotifications.net/profile/card#me> a as:Service;
+    as:name "Event Notifications Laboratory";
+    <http://www.w3.org/ns/ldp#inbox> <https://labs.eventnotifications.net/artifacts/paper01/inbox/>.
+<urn:uuid:1-1-0> a as:Offer, notify:IngestAction;
+    as:actor <https://labs.eventnotifications.net/profile/card#me>;
+    as:origin <https://labs.eventnotifications.net/system>;
+    as:object <https://labs.eventnotifications.net/artifacts/paper01/>;
+    as:target <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/profile/card.ttl>.
+<https://labs.eventnotifications.net/system> a as:Service.
+<https://labs.eventnotifications.net/artifacts/paper01/paper.pdf> a as:Article, schema:ScholarlyArticle;
+    as:mediaType "application/pdf".
+<https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/profile/card.ttl> a as:Service;
+    as:name "arXiv e-Print archive";
+    <http://www.w3.org/ns/ldp#inbox> <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/inbox/>.
+<urn:uuid:1-1-1> a notify:IngestAction, as:Accept;
+    as:actor <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/profile/card.ttl>;
+    as:origin <https://arxiv.org/system>;
+    as:object <urn:uuid:1-1-0>;
+    as:target <https://labs.eventnotifications.net/profile/card#me>;
+    as:context <https://labs.eventnotifications.net/artifacts/paper01/>;
+    as:inReplyTo <urn:uuid:1-1-0>.
+<https://arxiv.org/system> a as:Service
+}.
+<https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/eventlog/paper01/3.jsonld> = {
+<https://labs.eventnotifications.net/artifacts/paper01/> a schema:AboutPage;
+    iana:cite-as <https://w3id.org/eventnotifications/labs/artifacts/paper01/>;
+    as:url <https://labs.eventnotifications.net/artifacts/paper01/paper.pdf>.
+<https://labs.eventnotifications.net/profile/card#me> a as:Service;
+    as:name "Event Notifications Laboratory";
+    <http://www.w3.org/ns/ldp#inbox> <https://labs.eventnotifications.net/artifacts/paper01/inbox/>.
+<https://labs.eventnotifications.net/artifacts/paper01/paper.pdf> a as:Article, schema:ScholarlyArticle;
+    as:mediaType "application/pdf".
+<https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/profile/card.ttl> a as:Service;
+    as:name "arXiv e-Print archive";
+    <http://www.w3.org/ns/ldp#inbox> <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/inbox/>.
+<https://arxiv.org/system> a as:Service.
+<urn:uuid:1-1> a notify:IngestAction, as:Announce;
+    as:actor <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/profile/card.ttl>;
+    as:origin <https://arxiv.org/system>;
+    as:object <https://arxiv.org/abs/2208.00665>;
+    as:target <https://labs.eventnotifications.net/profile/card#me>;
+    as:context <https://labs.eventnotifications.net/artifacts/paper01/>;
+    as:inReplyTo <urn:uuid:1-1-0>.
+<https://arxiv.org/abs/2208.00665> a schema:AboutPage;
+    iana:cite-as <https://doi.org/10.48550/arXiv.2208.00665>
 }.
 <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1.jsonld> = {
 <https://labs.eventnotifications.net/artifacts/paper01/> a schema:AboutPage;
@@ -109,12 +188,12 @@
     <http://www.w3.org/ns/ldp#inbox> <https://labs.eventnotifications.net/artifacts/paper01/inbox/>.
 <https://labs.eventnotifications.net/artifacts/paper01/paper.pdf> a as:Article, schema:ScholarlyArticle;
     as:mediaType "application/pdf".
-<https://arxiv.org> a as:Service;
+<https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/profile/card.ttl> a as:Service;
     as:name "arXiv e-Print archive";
-    <http://www.w3.org/ns/ldp#inbox> <https://arxiv.org/inbox/>.
+    <http://www.w3.org/ns/ldp#inbox> <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/inbox/>.
 <https://arxiv.org/system> a as:Service.
 <urn:uuid:1-1> a notify:IngestAction, as:Announce;
-    as:actor <https://arxiv.org>;
+    as:actor <https://mellonscholarlycommunication.github.io/service_node/nodes/arxiv.org/profile/card.ttl>;
     as:origin <https://arxiv.org/system>;
     as:object <https://arxiv.org/abs/2208.00665>;
     as:target <https://labs.eventnotifications.net/profile/card#me>;
@@ -327,7 +406,7 @@
 <https://labs.eventnotifications.net/artifacts/paper02/> a schema:AboutPage
 }.
 <https://labs.eventnotifications.net/artifacts/paper01/eventlog.jsonld> = {
-<http://localhost:8000/data_node/eventlog.jsonld> a ldes:EventStream;
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog.jsonld> a ldes:EventStream;
     ev:artifact <https://labs.eventnotifications.net/artifacts/paper01/>;
     tree:member <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1-0.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1-1.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-2.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3-0.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3-1.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4-0.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4-1.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-2-5.jsonld>
 }.
