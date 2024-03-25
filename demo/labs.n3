@@ -1,0 +1,334 @@
+@prefix as: <https://www.w3.org/ns/activitystreams#>.
+@prefix ev: <https://www.eventnotifications.net/ns#>.
+@prefix notify: <https://purl.org/coar/notify_vocabulary/>.
+@prefix tree: <https://w3id.org/tree#>.
+@prefix ldes: <https://w3id.org/ldes#>.
+@prefix iana: <http://www.iana.org/assignments/relation/>.
+@prefix dataid: <http://dataid.dbpedia.org/ns/core#>.
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix schema: <http://schema.org/>.
+
+<https://labs.eventnotifications.net/artifacts/paper01/> a ev:Artifact;
+    ev:eventlog <https://labs.eventnotifications.net/artifacts/paper01/eventlog.jsonld>;
+    ev:hasEvent <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1-0.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1-1.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-2.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3-0.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3-1.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4-0.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4-1.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-2-5.jsonld>, <https://labs.eventnotifications.net/artifacts/paper02/eventlog/urn-uuid-2-5.jsonld>.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1-0.jsonld> a ev:Event, ev:DataNodeEvent;
+    dataid:checksum "Ta4r2oRw8LTEdC0h/FN0QHR/Dz6P4GGvzLwKkrhPros=";
+    ev:actor <https://labs.eventnotifications.net/profile/card#me>.
+<https://labs.eventnotifications.net/profile/card#me> a ev:ServiceNode.
+<https://arxiv.org> a ev:ServiceNode.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1-1.jsonld> a ev:Event, ev:DataNodeEvent;
+    dataid:checksum "xW6DM3heEdNM59DqB/z3aB1wLVSk96QNbO9OLY2rn/E=";
+    ev:actor <https://arxiv.org>.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1.jsonld> a ev:Event, ev:DataNodeEvent;
+    dataid:checksum "VY8aLlCaddD6bvJOctIDP4pBoakQFyGiRQX/1LCXWU8=";
+    ev:actor <https://arxiv.org>.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-2.jsonld> a ev:Event, ev:DataNodeEvent;
+    dataid:checksum "RheNDEpt7Sv4h1pBOsu9qgxAjhj5o59OH+eBFkVrjQw=";
+    ev:actor <https://zenodo.org>.
+<https://zenodo.org> a ev:ServiceNode.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3-0.jsonld> a ev:Event, ev:DataNodeEvent;
+    dataid:checksum "woIUhFydCnmvQDXseq8OFR1LvEXUIjOOOZXcn+3lK8E=";
+    ev:actor <https://labs.eventnotifications.net/profile/card#me>.
+<https://biblio.ugent.be> a ev:ServiceNode.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3-1.jsonld> a ev:Event, ev:DataNodeEvent;
+    dataid:checksum "EbCzwPcVfhu4HLKgoSe0mdpiBZDK2ydwuVika41Dd/4=";
+    ev:actor <https://biblio.ugent.be>.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3.jsonld> a ev:Event, ev:DataNodeEvent;
+    dataid:checksum "Jg08rGNnAc53cnvok0lBXwS+9fvdJTyAgS/8bcwVmwo=";
+    ev:actor <https://biblio.ugent.be>.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4-0.jsonld> a ev:Event, ev:DataNodeEvent;
+    dataid:checksum "DG3RzJppz7UQ73KhSM3Pj6Lo/YWwAUHUqekt+Ivudwg=";
+    ev:actor <https://labs.eventnotifications.net/profile/card#me>.
+<https://link.springer.com> a ev:ServiceNode.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4-1.jsonld> a ev:Event, ev:DataNodeEvent;
+    dataid:checksum "uE/cjVRIg2Kvatf3y2duQyAZKn+s8V+MyimFZ/zDz8I=";
+    ev:actor <https://link.springer.com>.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4.jsonld> a ev:Event, ev:DataNodeEvent;
+    dataid:checksum "AkuJ06+LVyys7pjbCECSEDhxcQAZQhk30IFDVNT1TrU=";
+    ev:actor <https://link.springer.com>.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-2-5.jsonld> a ev:Event, ev:DataNodeEvent;
+    dataid:checksum "WNxw6yrV9VNx5cCpOsQbh/hNLQDJygwKW/1U8cMTntg=";
+    ev:actor <https://labs.eventnotifications.net/users/bob/profile/card#me>.
+<https://labs.eventnotifications.net/users/bob/profile/card#me> a ev:ServiceNode;
+    ev:eventlog <https://labs.eventnotifications.net/users/bob/eventlog/paper01.jsonld>.
+<https://labs.eventnotifications.net/artifacts/paper02/eventlog/urn-uuid-2-5.jsonld> a ev:Event, ev:ServiceNodeEvent;
+    dataid:checksum "WNxw6yrV9VNx5cCpOsQbh/hNLQDJygwKW/1U8cMTntg=";
+    ev:actor <https://labs.eventnotifications.net/users/bob/profile/card#me>.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1-0.jsonld> = {
+<https://labs.eventnotifications.net/artifacts/paper01/> a schema:AboutPage;
+    iana:cite-as <https://w3id.org/eventnotifications/labs/artifacts/paper01/>;
+    as:url <https://labs.eventnotifications.net/artifacts/paper01/paper.pdf>.
+<https://labs.eventnotifications.net/profile/card#me> a as:Service;
+    as:name "Event Notifications Laboratory";
+    <http://www.w3.org/ns/ldp#inbox> <https://labs.eventnotifications.net/artifacts/paper01/inbox/>.
+<urn:uuid:1-1-0> a as:Offer, notify:IngestAction;
+    as:actor <https://labs.eventnotifications.net/profile/card#me>;
+    as:origin <https://labs.eventnotifications.net/system>;
+    as:object <https://labs.eventnotifications.net/artifacts/paper01/>;
+    as:target <https://arxiv.org>.
+<https://labs.eventnotifications.net/system> a as:Service.
+<https://labs.eventnotifications.net/artifacts/paper01/paper.pdf> a as:Article, schema:ScholarlyArticle;
+    as:mediaType "application/pdf".
+<https://arxiv.org> a as:Service;
+    as:name "arXiv e-Print archive";
+    <http://www.w3.org/ns/ldp#inbox> <https://arxiv.org/inbox/>
+}.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1-1.jsonld> = {
+<https://labs.eventnotifications.net/artifacts/paper01/> a schema:AboutPage;
+    iana:cite-as <https://w3id.org/eventnotifications/labs/artifacts/paper01/>;
+    as:url <https://labs.eventnotifications.net/artifacts/paper01/paper.pdf>.
+<https://labs.eventnotifications.net/profile/card#me> a as:Service;
+    as:name "Event Notifications Laboratory";
+    <http://www.w3.org/ns/ldp#inbox> <https://labs.eventnotifications.net/artifacts/paper01/inbox/>.
+<urn:uuid:1-1-0> a as:Offer, notify:IngestAction;
+    as:actor <https://labs.eventnotifications.net/profile/card#me>;
+    as:origin <https://labs.eventnotifications.net/system>;
+    as:object <https://labs.eventnotifications.net/artifacts/paper01/>;
+    as:target <https://arxiv.org>.
+<https://labs.eventnotifications.net/system> a as:Service.
+<https://labs.eventnotifications.net/artifacts/paper01/paper.pdf> a as:Article, schema:ScholarlyArticle;
+    as:mediaType "application/pdf".
+<https://arxiv.org> a as:Service;
+    as:name "arXiv e-Print archive";
+    <http://www.w3.org/ns/ldp#inbox> <https://arxiv.org/inbox/>.
+<urn:uuid:1-1-1> a notify:IngestAction, as:Accept;
+    as:actor <https://arxiv.org>;
+    as:origin <https://arxiv.org/system>;
+    as:object <urn:uuid:1-1-0>;
+    as:target <https://labs.eventnotifications.net/profile/card#me>;
+    as:context <https://labs.eventnotifications.net/artifacts/paper01/>;
+    as:inReplyTo <urn:uuid:1-1-0>.
+<https://arxiv.org/system> a as:Service
+}.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1.jsonld> = {
+<https://labs.eventnotifications.net/artifacts/paper01/> a schema:AboutPage;
+    iana:cite-as <https://w3id.org/eventnotifications/labs/artifacts/paper01/>;
+    as:url <https://labs.eventnotifications.net/artifacts/paper01/paper.pdf>.
+<https://labs.eventnotifications.net/profile/card#me> a as:Service;
+    as:name "Event Notifications Laboratory";
+    <http://www.w3.org/ns/ldp#inbox> <https://labs.eventnotifications.net/artifacts/paper01/inbox/>.
+<https://labs.eventnotifications.net/artifacts/paper01/paper.pdf> a as:Article, schema:ScholarlyArticle;
+    as:mediaType "application/pdf".
+<https://arxiv.org> a as:Service;
+    as:name "arXiv e-Print archive";
+    <http://www.w3.org/ns/ldp#inbox> <https://arxiv.org/inbox/>.
+<https://arxiv.org/system> a as:Service.
+<urn:uuid:1-1> a notify:IngestAction, as:Announce;
+    as:actor <https://arxiv.org>;
+    as:origin <https://arxiv.org/system>;
+    as:object <https://arxiv.org/abs/2208.00665>;
+    as:target <https://labs.eventnotifications.net/profile/card#me>;
+    as:context <https://labs.eventnotifications.net/artifacts/paper01/>;
+    as:inReplyTo <urn:uuid:1-1-0>.
+<https://arxiv.org/abs/2208.00665> a schema:AboutPage;
+    iana:cite-as <https://doi.org/10.48550/arXiv.2208.00665>
+}.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-2.jsonld> = {
+<https://labs.eventnotifications.net/artifacts/paper01/> a schema:AboutPage;
+    iana:cite-as <https://w3id.org/eventnotifications/labs/artifacts/paper01/>;
+    as:url <https://labs.eventnotifications.net/artifacts/paper01/paper.pdf>.
+<https://labs.eventnotifications.net/profile/card#me> a as:Service;
+    as:name "Event Notifications Laboratory";
+    <http://www.w3.org/ns/ldp#inbox> <https://labs.eventnotifications.net/artifacts/paper01/inbox/>.
+<https://labs.eventnotifications.net/artifacts/paper01/paper.pdf> a as:Article, schema:ScholarlyArticle;
+    as:mediaType "application/pdf".
+<https://zenodo.org> a as:Service;
+    as:name "Zenodo";
+    <http://www.w3.org/ns/ldp#inbox> <https://zenodo.org/inbox/>.
+<urn:uuid:1-2> a as:Announce, notify:RelationshipAction;
+    as:actor <https://zenodo.org>;
+    as:origin <https://zenodo.org/system>;
+    as:object <urn:uuid:C46D2B49-E7EA-491B-8F8F-8D6F70547F63>;
+    as:target <https://labs.eventnotifications.net/profile/card#me>;
+    as:context <https://labs.eventnotifications.net/artifacts/paper01/>.
+<https://zenodo.org/system> a as:Service.
+<urn:uuid:C46D2B49-E7EA-491B-8F8F-8D6F70547F63> a as:Relationship;
+    as:object "https://zenodo.org/records/6555821";
+    as:relationship "http://purl.org/vocab/frbr/core#supplement";
+    as:subject "https://labs.eventnotifications.net/artifacts/paper01/"
+}.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3-0.jsonld> = {
+<https://labs.eventnotifications.net/artifacts/paper01/> a schema:AboutPage;
+    iana:cite-as <https://w3id.org/eventnotifications/labs/artifacts/paper01/>;
+    as:url <https://labs.eventnotifications.net/artifacts/paper01/paper.pdf>.
+<https://labs.eventnotifications.net/profile/card#me> a as:Service;
+    as:name "Event Notifications Laboratory";
+    <http://www.w3.org/ns/ldp#inbox> <https://labs.eventnotifications.net/artifacts/paper01/inbox/>.
+<https://labs.eventnotifications.net/system> a as:Service.
+<https://labs.eventnotifications.net/artifacts/paper01/paper.pdf> a as:Article, schema:ScholarlyArticle;
+    as:mediaType "application/pdf".
+<urn:uuid:1-3-0> a as:Offer, notify:RegistrationAction;
+    as:actor <https://labs.eventnotifications.net/profile/card#me>;
+    as:origin <https://labs.eventnotifications.net/system>;
+    as:object <https://labs.eventnotifications.net/artifacts/paper01/>;
+    as:target <https://biblio.ugent.be>.
+<https://biblio.ugent.be> a as:Service;
+    as:name "Academic Bibliography";
+    <http://www.w3.org/ns/ldp#inbox> <https://biblio.ugent.be/inbox/>
+}.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3-1.jsonld> = {
+<https://labs.eventnotifications.net/artifacts/paper01/> a schema:AboutPage;
+    iana:cite-as <https://w3id.org/eventnotifications/labs/artifacts/paper01/>;
+    as:url <https://labs.eventnotifications.net/artifacts/paper01/paper.pdf>.
+<https://labs.eventnotifications.net/profile/card#me> a as:Service;
+    as:name "Event Notifications Laboratory";
+    <http://www.w3.org/ns/ldp#inbox> <https://labs.eventnotifications.net/artifacts/paper01/inbox/>.
+<https://labs.eventnotifications.net/system> a as:Service.
+<https://labs.eventnotifications.net/artifacts/paper01/paper.pdf> a as:Article, schema:ScholarlyArticle;
+    as:mediaType "application/pdf".
+<urn:uuid:1-3-0> a as:Offer, notify:RegistrationAction;
+    as:actor <https://labs.eventnotifications.net/profile/card#me>;
+    as:origin <https://labs.eventnotifications.net/system>;
+    as:object <https://labs.eventnotifications.net/artifacts/paper01/>;
+    as:target <https://biblio.ugent.be>.
+<https://biblio.ugent.be> a as:Service;
+    as:name "Academic Bibliography";
+    <http://www.w3.org/ns/ldp#inbox> <https://biblio.ugent.be/inbox/>.
+<urn:uuid:1-3-1> a as:Accept, notify:RegistrationAction;
+    as:actor <https://biblio.ugent.be>;
+    as:origin <https://biblio.ugent.be/system>;
+    as:object <urn:uuid:1-3-0>;
+    as:target <https://labs.eventnotifications.net/profile/card#me>;
+    as:context <https://labs.eventnotifications.net/artifacts/paper01/>;
+    as:inReplyTo <urn:uuid:1-3-0>.
+<https://biblio.ugent.be/system> a as:Service
+}.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3.jsonld> = {
+<https://labs.eventnotifications.net/artifacts/paper01/> a schema:AboutPage;
+    iana:cite-as <https://w3id.org/eventnotifications/labs/artifacts/paper01/>;
+    as:url <https://labs.eventnotifications.net/artifacts/paper01/paper.pdf>.
+<https://labs.eventnotifications.net/profile/card#me> a as:Service;
+    as:name "Event Notifications Laboratory";
+    <http://www.w3.org/ns/ldp#inbox> <https://labs.eventnotifications.net/artifacts/paper01/inbox/>.
+<https://labs.eventnotifications.net/artifacts/paper01/paper.pdf> a as:Article, schema:ScholarlyArticle;
+    as:mediaType "application/pdf".
+<https://biblio.ugent.be> a as:Service;
+    as:name "Academic Bibliography";
+    <http://www.w3.org/ns/ldp#inbox> <https://biblio.ugent.be/inbox/>.
+<https://biblio.ugent.be/system> a as:Service.
+<urn:uuid:1-3> a as:Announce, notify:RegistrationAction;
+    as:actor <https://biblio.ugent.be>;
+    as:origin <https://biblio.ugent.be/system>;
+    as:object <https://biblio.ugent.be/publication/8762613>;
+    as:target <https://labs.eventnotifications.net/profile/card#me>;
+    as:context <https://labs.eventnotifications.net/artifacts/paper01/>;
+    as:inReplyTo <urn:uuid:1-3-0>.
+<https://biblio.ugent.be/publication/8762613> a schema:AboutPage;
+    iana:cite-as <http://hdl.handle.net/1854/LU-8762613>
+}.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4-0.jsonld> = {
+<https://labs.eventnotifications.net/artifacts/paper01/> a schema:AboutPage;
+    iana:cite-as <https://w3id.org/eventnotifications/labs/artifacts/paper01/>;
+    as:url <https://labs.eventnotifications.net/artifacts/paper01/paper.pdf>.
+<https://labs.eventnotifications.net/profile/card#me> a as:Service;
+    as:name "Event Notifications Laboratory";
+    <http://www.w3.org/ns/ldp#inbox> <https://labs.eventnotifications.net/artifacts/paper01/inbox/>.
+<https://labs.eventnotifications.net/system> a as:Service.
+<https://labs.eventnotifications.net/artifacts/paper01/paper.pdf> a as:Article, schema:ScholarlyArticle;
+    as:mediaType "application/pdf".
+<urn:uuid:1-4-0> a as:Offer, notify:EndorsementAction;
+    as:actor <https://labs.eventnotifications.net/profile/card#me>;
+    as:origin <https://labs.eventnotifications.net/system>;
+    as:object <https://labs.eventnotifications.net/artifacts/paper01/>;
+    as:target <https://link.springer.com>.
+<https://link.springer.com> a as:Service;
+    as:name "Springer Link";
+    <http://www.w3.org/ns/ldp#inbox> <https://link.springer.com/inbox/>
+}.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4-1.jsonld> = {
+<https://labs.eventnotifications.net/artifacts/paper01/> a schema:AboutPage;
+    iana:cite-as <https://w3id.org/eventnotifications/labs/artifacts/paper01/>;
+    as:url <https://labs.eventnotifications.net/artifacts/paper01/paper.pdf>.
+<https://labs.eventnotifications.net/profile/card#me> a as:Service;
+    as:name "Event Notifications Laboratory";
+    <http://www.w3.org/ns/ldp#inbox> <https://labs.eventnotifications.net/artifacts/paper01/inbox/>.
+<https://labs.eventnotifications.net/system> a as:Service.
+<https://labs.eventnotifications.net/artifacts/paper01/paper.pdf> a as:Article, schema:ScholarlyArticle;
+    as:mediaType "application/pdf".
+<urn:uuid:1-4-0> a as:Offer, notify:EndorsementAction;
+    as:actor <https://labs.eventnotifications.net/profile/card#me>;
+    as:origin <https://labs.eventnotifications.net/system>;
+    as:object <https://labs.eventnotifications.net/artifacts/paper01/>;
+    as:target <https://link.springer.com>.
+<https://link.springer.com> a as:Service;
+    as:name "Springer Link";
+    <http://www.w3.org/ns/ldp#inbox> <https://link.springer.com/inbox/>.
+<urn:uuid:1-4-1> a as:Accept, notify:EndorsementAction;
+    as:actor <https://link.springer.com>;
+    as:origin <https://link.springer.com/system>;
+    as:object <urn:uuid:1-4-0>;
+    as:target <https://labs.eventnotifications.net/profile/card#me>;
+    as:context <https://labs.eventnotifications.net/artifacts/paper01/>;
+    as:inReplyTo <urn:uuid:1-4-0>.
+<https://link.springer.com/system> a as:Service
+}.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4.jsonld> = {
+<https://labs.eventnotifications.net/artifacts/paper01/> a schema:AboutPage;
+    iana:cite-as <https://w3id.org/eventnotifications/labs/artifacts/paper01/>;
+    as:url <https://labs.eventnotifications.net/artifacts/paper01/paper.pdf>.
+<https://labs.eventnotifications.net/profile/card#me> a as:Service;
+    as:name "Event Notifications Laboratory";
+    <http://www.w3.org/ns/ldp#inbox> <https://labs.eventnotifications.net/artifacts/paper01/inbox/>.
+<https://labs.eventnotifications.net/artifacts/paper01/paper.pdf> a as:Article, schema:ScholarlyArticle;
+    as:mediaType "application/pdf".
+<https://link.springer.com> a as:Service;
+    as:name "Springer Link";
+    <http://www.w3.org/ns/ldp#inbox> <https://link.springer.com/inbox/>.
+<https://link.springer.com/system> a as:Service.
+<urn:uuid:1-4> a as:Announce, notify:EndorsementAction;
+    as:actor <https://link.springer.com>;
+    as:origin <https://link.springer.com/system>;
+    as:object <https://link.springer.com/chapter/10.1007/978-3-031-16802-4_11>;
+    as:target <https://labs.eventnotifications.net/profile/card#me>;
+    as:context <https://labs.eventnotifications.net/artifacts/paper01/>.
+<https://link.springer.com/chapter/10.1007/978-3-031-16802-4_11> a as:Page, schema:WebPage;
+    iana:cite-as <https://doi.org/10.1007/978-3-031-16802-4_11>
+}.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-2-5.jsonld> = {
+<https://labs.eventnotifications.net/artifacts/paper01/> a schema:AboutPage;
+    iana:cite-as <https://w3id.org/eventnotifications/labs/artifacts/paper01/>;
+    as:url <https://labs.eventnotifications.net/artifacts/paper01/paper.pdf>.
+<https://labs.eventnotifications.net/profile/card#me> a as:Service;
+    as:name "Event Notifications Laboratory";
+    <http://www.w3.org/ns/ldp#inbox> <https://labs.eventnotifications.net/artifacts/paper01/inbox/>.
+<https://labs.eventnotifications.net/artifacts/paper01/paper.pdf> a as:Article, schema:ScholarlyArticle;
+    as:mediaType "application/pdf".
+<https://labs.eventnotifications.net/users/bob/profile/card#me> a as:Person;
+    as:name "Bob";
+    <http://www.w3.org/ns/ldp#inbox> <https://labs.eventnotifications.net/artifacts/paper02/inbox/>.
+<urn:uuid:2-5> a as:Announce;
+    as:actor <https://labs.eventnotifications.net/users/bob/profile/card#me>;
+    as:origin <https://scholarly.dashboard.net/system>;
+    as:object <https://labs.eventnotifications.net/artifacts/paper02/>;
+    as:target <https://labs.eventnotifications.net/profile/card#me>;
+    as:context <https://labs.eventnotifications.net/artifacts/paper01/>.
+<https://scholarly.dashboard.net/system> a as:Service.
+<https://labs.eventnotifications.net/artifacts/paper02/> a schema:AboutPage
+}.
+<https://labs.eventnotifications.net/artifacts/paper02/eventlog/urn-uuid-2-5.jsonld> = {
+<https://labs.eventnotifications.net/artifacts/paper01/> a schema:AboutPage;
+    iana:cite-as <https://w3id.org/eventnotifications/labs/artifacts/paper01/>;
+    as:url <https://labs.eventnotifications.net/artifacts/paper01/paper.pdf>.
+<https://labs.eventnotifications.net/profile/card#me> a as:Service;
+    as:name "Event Notifications Laboratory";
+    <http://www.w3.org/ns/ldp#inbox> <https://labs.eventnotifications.net/artifacts/paper01/inbox/>.
+<https://labs.eventnotifications.net/artifacts/paper01/paper.pdf> a as:Article, schema:ScholarlyArticle;
+    as:mediaType "application/pdf".
+<https://labs.eventnotifications.net/users/bob/profile/card#me> a as:Person;
+    as:name "Bob";
+    <http://www.w3.org/ns/ldp#inbox> <https://labs.eventnotifications.net/artifacts/paper02/inbox/>.
+<urn:uuid:2-5> a as:Announce;
+    as:actor <https://labs.eventnotifications.net/users/bob/profile/card#me>;
+    as:origin <https://scholarly.dashboard.net/system>;
+    as:object <https://labs.eventnotifications.net/artifacts/paper02/>;
+    as:target <https://labs.eventnotifications.net/profile/card#me>;
+    as:context <https://labs.eventnotifications.net/artifacts/paper01/>.
+<https://scholarly.dashboard.net/system> a as:Service.
+<https://labs.eventnotifications.net/artifacts/paper02/> a schema:AboutPage
+}.
+<https://labs.eventnotifications.net/artifacts/paper01/eventlog.jsonld> = {
+<http://localhost:8000/data_node/eventlog.jsonld> a ldes:EventStream;
+    ev:artifact <https://labs.eventnotifications.net/artifacts/paper01/>;
+    tree:member <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1-0.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1-1.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-1.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-2.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3-0.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3-1.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-3.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4-0.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4-1.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-1-4.jsonld>, <https://labs.eventnotifications.net/artifacts/paper01/eventlog/urn-uuid-2-5.jsonld>
+}.
+
