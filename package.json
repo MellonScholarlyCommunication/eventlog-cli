@@ -26,6 +26,7 @@
     "demo-event-sn": "node bin/eventlog-cli.js get http://localhost:8000/service_node/event1.jsonld",
     "demo-list-mementos-dn": "node ./bin/eventlog-cli.js list-mementos http://localhost:8000/data_node/eventlog.jsonld",
     "demo-crawl": "node ./bin/eventlog-cli.js crawl http://localhost:8000/data_node/artifact.html",
+    "labs-crawl": "node ./bin/eventlog-cli.js crawl https://labs.eventnotifications.net/artifacts/paper01/",
     "test-crawl": "./bin/test-crawl.sh demo/crawl.n3"
   },
   "devDependencies": {},
