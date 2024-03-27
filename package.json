@@ -13,7 +13,7 @@
   "license": "MIT",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "node bin/eventlog-server.js",
+    "server": "mellon-server",
     "demo-where-dn": "node bin/eventlog-cli.js where http://localhost:8000/data_node/artifact.html",
     "demo-where-dn2": "node bin/eventlog-cli.js where http://localhost:8000/data_node/artifact2.html",
     "demo-get-dn": "node bin/eventlog-cli.js list http://localhost:8000/data_node/eventlog.jsonld",
@@ -37,6 +37,7 @@
     "exponential-backoff": "^3.1.1",
     "http-link-header": "^1.1.3",
     "log4js": "^6.9.1",
+    "mellon-server": "^1.0.0",
     "memento-cli": "^1.0.3",
     "n3": "^1.17.2",
     "node-fetch": "1.7.1",

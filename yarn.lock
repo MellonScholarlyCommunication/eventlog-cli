@@ -3061,6 +3061,11 @@ http-link@^0.3.0:
   resolved "https://registry.yarnpkg.com/http-link/-/http-link-0.3.0.tgz#756516d0d9f91580d456301438d11e4397843e81"
   integrity sha512-7AP3+8IDKP5s2fv2AP4jDcUqWQ+RKzAiD+0/L5k70v1VC4Ni9fh0bo/CPJyZoUJvzlJ1K5fhMoAas+W+TJS1oQ==
 
+http@^0.0.1-security:
+  version "0.0.1-security"
+  resolved "https://registry.yarnpkg.com/http/-/http-0.0.1-security.tgz#3aac09129d12dc2747bbce4157afde20ad1f7995"
+  integrity sha512-RnDvP10Ty9FxqOtPZuxtebw1j4L/WiqNMDtuc1YMH1XQm5TgDRaR1G9u8upL6KD1bXHSp9eSXo/ED+8Q7FAr+g==
+
 iconv-lite@^0.6.2:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.6.3.tgz#a52f80bf38da1952eb5c681790719871a1a72501"
@@ -3234,6 +3239,15 @@ lru-cache@^6.0.0:
   integrity sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==
   dependencies:
     yallist "^4.0.0"
+
+mellon-server@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mellon-server/-/mellon-server-1.0.0.tgz#239848d33a82f426cb366ba037d4acfceb2dfc30"
+  integrity sha512-ucv3bE8ePpKefYiMrvEVI81j68Z13nYG978ogsb/zQHPm1f8b3TgwzqeDGu0G1zO4/c9FSGTXD/NH892sE654A==
+  dependencies:
+    commander "^12.0.0"
+    http "^0.0.1-security"
+    log4js "^6.9.1"
 
 memento-cli@^1.0.3:
   version "1.0.3"
