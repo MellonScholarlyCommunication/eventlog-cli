@@ -3,12 +3,10 @@
 const { program } = require('commander');
 const { discoverLog, 
         listEvents, 
-        getEvent,
-        canonizeEvent,
         listEventMementos,
         crawlEvent,
         printN3Store,
-        sha256
+        eventDetails
     } = require('../lib/eventlog.js');
 
 program
@@ -96,14 +94,3 @@ program.command('crawl')
   });
 
 program.parse();
-
-async function eventDetails(url) {
-  const event = await getEvent(url);
-  if (! event) {
-    return { [url] : {} };
-  }
-  const canonical = await canonizeEvent(event['_body']);
-  event['sha256'] = sha256(canonical);
-  delete event['_body'];
-  return { [url] : event };
-}
