@@ -1,0 +1,4 @@
+@prefix ev: <https://www.eventnotifications.net/ns#> .
+
+<http://localhost:8000/demo_node/catalog.ttl>
+    ev:eventlog_catalog <http://localhost:8000/demo_node/catalog.json> .

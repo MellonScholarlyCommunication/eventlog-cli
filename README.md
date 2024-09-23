@@ -8,7 +8,7 @@ An experimental command line client for the [Event Notifications](https://www.ev
 yarn install
 ```
 
-We also need an installation of the [EYE](https://github.com/eyereasoner/eye) reasoner.
+Optional an installation of the [EYE](https://github.com/eyereasoner/eye) reasoner is required to evaluate crawled event logs.
 
 ## usage
 
@@ -91,6 +91,127 @@ $ ./bin/test-crawl.sh demo/crawl.n3
 ## environmental variables
 
 - `LOG4JS` : set to `info`, `debug`, `error` to receive logging information
+
+## event log
+
+An event log is a listing of [Event Notifications](https://www.eventnotifications.net) related at a (scholarly) artifact. The event log is serialized as a [LDES](https://semiceu.github.io/LinkedDataEventStreams/) in JSON-LD.
+
+An example of a log:
+
+```
+{
+  "@context": "https://labs.eventnotifications.net/contexts/eventlog.jsonld",
+  "id": "https://mycontributions.info/service/e/trace?artifact=latest",
+  "type": "EventLog",
+  "artifact": "http://localhost:8000/data_node/artifact.html",
+  "member": [
+      "http://localhost:8000/service_node/event1.jsonld",
+      "http://localhost:8000/service_node/event2.jsonld"
+  ]
+}
+```
+
+Event logs can optionally contain metadata about the referenced event notifications:
+
+```
+{
+  "@context": "https://labs.eventnotifications.net/contexts/eventlog.jsonld",
+  "id": "https://mycontributions.info/service/e/trace?artifact=latest",
+  "type": "EventLog",
+  "artifact": "http://localhost:8000/data_node/artifact.html",
+  "member": [
+    {
+      "id": "http://localhost:8000/service_node/event1.jsonld",
+      "created": "2024-09-18T11:26:57.688Z",
+      "checksum": {
+        "type": "Checksum",
+        "algorithm": "spdx:checksumAlgorithm_md5",
+        "checksumValue": "30bf8cc40272be1239c40f7b9f950d7d"
+      }
+    }
+    {
+      "id": "http://localhost:8000/service_node/event2.jsonld",
+      "created": "2024-09-18T11:26:57.703Z",
+      "checksum": {
+        "type": "Checksum",
+        "algorithm": "spdx:checksumAlgorithm_md5",
+        "checksumValue": "4e299d9468e8a77cbf6b92910852ddac"
+      }
+    }
+  ]
+}
+```
+
+## Event log discovery
+
+### Link-Template rel=eventlog HTTP header
+
+Given an artifact at a data node the event log can be discovered by reading the `Link-Template` header with a `rel=eventlog` relation:
+
+```
+Link-Template: "http://localhost:8000/data_node/eventlog.jsonld ; rel="eventlog"
+```
+
+Given a service node, the event log for a particular artifact can be found by reading the `Link-Template` header from a service node entry page (the homepage, the profile page). When a `{url}` is present in the template the artifact url should be filled in:
+
+```
+Link-Template: "https://mycontributions.info/service/e/trace?artifact={url}" ; rel="eventlog"
+```
+
+### IETF link-template RDF property
+
+Given an artifact or service node the event log can be found by requesting an RDF representation of the resource and executing the SPARQL query:
+
+```
+PREFIX ietf: <http://www.iana.org/assignments/relation/>
+
+SELECT ?template {
+    <url> ietf:link-template ?template.
+}
+```
+
+where `<url>` is the URL of the artifact or service node.
+
+## Link rel=eventlog_catalog HTTP header
+
+Given an artifact URL the event log can be discovered by reading for a service node the `Link` header with a `rel=eventlog_catalog` relation:
+
+```
+Link: <http://localhost:8000/demo_node/catalog.json> ; rel="eventlog_catalog"
+```
+
+The `catalog.json` should be a JSON document containing a listing of all (locally) known event logs for an artifact:
+
+```
+{
+  "member" : [
+    {
+      "id": "http://localhost:8000/eventlog1.jsonld",
+      "artifact": "http://localhost:8000/artifact1.jsonld"
+    },
+    {
+      "id": "http://localhost:8000/eventlog2.jsonld",
+      "artifact": "http://localhost:8000/artifact2.jsonld"
+    }
+  ]
+}
+```
+
+The event log can be read from this JSON file by comparing it with the matching artifact.
+
+## Event Notifications eventlog_catalog RDF property
+
+Given an artifact or service node the event log can be found by requesting an RDF representation of the resource and executing the SPARQL query:
+
+```
+PREFIX ev: <https://www.eventnotifications.net/ns#>
+
+SELECT ?catalog {
+    <url> ev:eventlog_catalog ?catalog .
+}
+```
+
+where `<url>` is the URL of the artifact or service node. At the `?catalog` should contain the URL of a JSON catalog, as explained in the previous section.
 
 ## see also
 

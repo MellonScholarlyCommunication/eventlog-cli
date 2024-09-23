@@ -1,0 +1,4 @@
+@prefix ietf: <http://www.iana.org/assignments/relation/> .
+
+<http://localhost:8000/demo_node/profile.ttl> 
+    ietf:link-template "http://demo.org?artifact={url}" .

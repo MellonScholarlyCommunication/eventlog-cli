@@ -1,0 +1,8 @@
+{
+    "member": [
+        {
+            "id": "http://somewhere.org/eventlog1.jsonld",
+            "artifact": "http://example.org"
+        }
+    ]
+}

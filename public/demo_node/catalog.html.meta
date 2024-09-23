@@ -1,0 +1,4 @@
+{
+    "Content-Type": "text/html",
+    "Link": "<http://localhost:8000/demo_node/catalog.json> ; rel=\"eventlog_catalog\""
+}
