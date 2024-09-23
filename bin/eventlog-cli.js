@@ -17,8 +17,8 @@ program
   .description('CLI to Event Logs');
 
 program.command('where')
-  .option('-f, --for <actor>','Actor')
-  .argument('<url>', 'Artifact|Service url')
+  .option('-f, --for <service url>','Service Node Url')
+  .argument('<url>', 'Artifact')
   .action( async (url,options) => {
     let loc;
 
@@ -73,9 +73,18 @@ program.command('list-mementos')
   });
 
 program.command('crawl')
+  .option('-f, --for <service url>','Service Node Url')
   .argument('<artifact>', 'Artifact')
-  .action( async (artifact) => {
-    const store = await crawlEvent(artifact);
+  .action( async (artifact,options) => {
+    let store;
+
+    if (options['for']) {
+      store = await crawlEvent(options['for'],artifact);
+    }
+    else {
+      store = await crawlEvent(artifact);
+    }
+
     const trig = await printN3Store(store, 'TriG');
 
     if (trig) {
